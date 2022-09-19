@@ -50,7 +50,7 @@ void WhrCreateLightningEnvironment()
 	PostEvent(WHR_LIGHTNING_DOIT,1000 + rand(1000));
 }
 
-void MoveLightningToLayers(string sExecuteLayer, string sRealizeLayer)
+void MoveLightningToLayers(int sExecuteLayer, int sRealizeLayer)
 {
 	LayerDelObject(EXECUTE, &Lightning);
 	LayerDelObject(REALIZE, &Lightning);

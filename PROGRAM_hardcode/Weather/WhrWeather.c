@@ -19,7 +19,7 @@ int		iTotalNumWeathers = 0;
 string	sLightingPath = "day";
 string	sLmLightingPath = "day";
 string	sInsideBack = "";
-string	sNewExecuteLayer, sNewRealizeLayer;
+int	sNewExecuteLayer, sNewRealizeLayer;
 string	sCurrentFog;
 float	fWeatherDelta = 0.0;
 float	fWeatherAngle, fWeatherSpeed;
@@ -324,7 +324,7 @@ int Whr_OnCalcFogColor()
 	return iColor;
 }
 
-void CreateWeather(string sExecuteLayer, string sRealizeLayer)
+void CreateWeather(int sExecuteLayer, int sRealizeLayer)
 {
 	CreateWeatherEnvironment();
 	MoveWeatherToLayers(sExecuteLayer, sRealizeLayer);
@@ -335,7 +335,7 @@ void DeleteWeather()
 	DeleteWeatherEnvironment();
 }
 
-void MoveWeatherToLayers(string sExecuteLayer, string sRealizeLayer)
+void MoveWeatherToLayers(int sExecuteLayer, int sRealizeLayer)
 {
 	LayerDelObject(EXECUTE, &Weather);
 	LayerDelObject(REALIZE, &Weather);

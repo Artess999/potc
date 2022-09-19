@@ -11,7 +11,7 @@ void DeleteSea()
 	DeleteClass(&Sea);
 }
 
-void CreateSea(string sExecuteLayer, string sRealizeLayer)
+void CreateSea(int sExecuteLayer, int sRealizeLayer)
 {
 	if (IsEntity(&Sea)) { Trace("ERROR: Sea Already Loaded!!!"); return; }
 
@@ -23,7 +23,7 @@ void CreateSea(string sExecuteLayer, string sRealizeLayer)
 	Sea.AbordageMode = false;
 }
 
-void MoveSeaToLayers(string sExecuteLayer, string sRealizeLayer)
+void MoveSeaToLayers(int sExecuteLayer, int sRealizeLayer)
 {
 	LayerDelObject(EXECUTE, &Sea);
 	LayerDelObject(REALIZE, &Sea);

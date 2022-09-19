@@ -46,7 +46,7 @@ void WhrCreateRainEnvironment()
 	bWeatherIsRain = true;
 }
 
-void MoveRainToLayers(string sExecuteLayer, string sRealizeLayer)
+void MoveRainToLayers(int sExecuteLayer, int sRealizeLayer)
 {
 	LayerDelObject(EXECUTE, &Rain);
 	LayerDelObject(REALIZE, &Rain);
