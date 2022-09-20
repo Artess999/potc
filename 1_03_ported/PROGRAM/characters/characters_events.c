@@ -216,6 +216,12 @@ bool chrIsNowEnableReload()
 #event_handler(EVENT_DIALOG_EXIT,"chrChangeReloadStateHndl");
 #event_handler("EnableReloadLocatorEvent","chrChangeReloadStateHndl");
 #event_handler("chrCheckChangeOpenStateEvent","chrCheckChangeOpenState");
+#event_handler("eGetWeaponID","funcGetWeaponID");
+
+string funcGetWeaponID()
+{
+	return "blade";
+}
 
 void chrChangeReloadStateHndl()
 {

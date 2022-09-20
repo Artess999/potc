@@ -18,6 +18,9 @@ int		Ships[32];
 
 #define SHIP_DETONATE_SMALL		"ShipDetonateSmall"
 
+#event_handler("Ship_StartLoad", "Ship_StartLoad");
+#event_handler("Ship_EndLoad", "Ship_EndLoad");
+
 void CreateRiggingEnvironment()
 {
 	CreateEntity(&Sail, "Sail");
@@ -1937,4 +1940,14 @@ void Ship_ClearImpulseStrength(ref rCharacter)
 void Ship_PrepareShipForLocation(ref rCharacter)
 {
 	Ship_ClearImpulseStrength(rCharacter);
+}
+
+void Ship_StartLoad()
+{
+	SetTexturePath(0, "Ships\\");
+}
+
+void Ship_EndLoad()
+{
+	SetTexturePath(0, "");
 }
